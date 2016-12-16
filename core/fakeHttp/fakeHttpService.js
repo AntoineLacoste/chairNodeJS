@@ -5,12 +5,12 @@ angular.module('chairApp')
 
 	this.get = function(url) {
 		var deferred = $q.defer();
-		var regexGetChair = new RegExp('\/chair\/[0-9]+$');
+		var regexGetChair = new RegExp('\/article\/[0-9]+$');
 		if (url.match(regexGetChair)) {
 			deferred.resolve({
-			    data:getChair(url.substr(('/chair/').length))
+			    data:getChair(url.substr(('/article/').length))
 			});
-		} else if(url == '/chair/getallchairs') {
+		} else if(url == '/article/getallchairs') {
             deferred.resolve({
                 data: getAllChairs()
             });
