@@ -36,8 +36,13 @@ angular.module('chairApp')
 	};*/
 });
 
-function getChair(id) {
-    return getAllChairs().chairs[id];
+function getChair(reference) {
+    for (var i = 0; i < getAllChairs().chairs.length; i++){
+        if (getAllChairs().chairs[i].reference == reference){
+            return getAllChairs().chairs[i];
+        }
+    }
+    return null;
 }
 
 function getAllChairs() {
