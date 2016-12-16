@@ -1,0 +1,8 @@
+.main{
+    margin-left: 50px;
+}
+
+.imgRestrict{
+    max-height: 200px;
+    max-width: 450px;
+}
