@@ -20,20 +20,6 @@ angular.module('chairApp')
         }
         return deferred.promise;
 	};
-
-	/*this.post = function(url, loginData, headers) {
-		var deferred = $q.defer();
-		if (url == apiBaseURL + '/Users/login') {
-			if (loginData.email == 'admin@localhost' && loginData.password == 'azerty') {
-				deferred.resolve({data:templateLoginToken(1)});
-			} else {
-				deferred.reject("Invalid credentials"); 
-			}
-		} else {
-			deferred.reject("Invalid url"); 
-		}
-		return deferred.promise;
-	};*/
 });
 
 function getChair(reference) {

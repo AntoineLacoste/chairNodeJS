@@ -6,6 +6,7 @@ angular.module('chairApp')
         fakeHttp.get('/article/' + $routeParams.reference).then(
             function (response) {
                 $scope.article = response.data;
+                console.log($scope.article);
             },
             function (error) {
                 console.log(error);
