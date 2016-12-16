@@ -6,17 +6,17 @@ angular.module('chairApp')
 	this.get = function(url) {
 		var deferred = $q.defer();
 		var regexGetChair = new RegExp('\/chair\/[0-9]+$');
-		if (url.match(regex)) {
+		if (url.match(regexGetChair)) {
 			deferred.resolve({
 			    data:getChair(url.substr(('/chair/').length))
 			});
-		} else if(url == '/chair/getAll') {
+		} else if(url == '/chair/getallchairs') {
             deferred.resolve({
-                data: getChair(url.substr(('/chair/').length))
+                data: getAllChairs()
             });
         }
         else{
-            erred.reject("Invalid url");
+            deferred.reject("Invalid url");
         }
         return deferred.promise;
 	};
@@ -106,11 +106,11 @@ function getChair(id) {
 	}
 }
 
-function getAll() {
+function getAllChairs() {
     var chairs      = {};
     var chairsArray = [];
 
-    for(var i = 0; i < 6; i++){
+    for(var i = 1; i < 6; i++){
         chairsArray.push(getChair(i));
     }
 

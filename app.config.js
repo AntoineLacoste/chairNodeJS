@@ -1,14 +1,8 @@
 'use strict';
 
-angular.module('equipeApp')
+angular.module('chairApp')
     .config(function($routeProvider){
     $routeProvider
-        .when('/:section', {
-            template: '<news-feed></news-feed>'
-        })
-        .when('/article/:articleId', {
-            template: '<article-page></article-page>'
-        })
         .when('/', {
             controller: 'HomeController',
             templateUrl:  'home.html'
