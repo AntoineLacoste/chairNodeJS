@@ -1,9 +1,9 @@
 <div class="header">
 	<div>
-		<a href="#/">Panier + {{itemsInCart.length}}</a>
-		<img src="" alt="logo"/>
-		<div>
-			<p>MENU</p>
+		<div ng-click="goTo(panier)" class="cart_wrapper">
+			<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+			<p>{{itemsInCart.length}}</p>
 		</div>
+		<img class="logo" src="img/logo.png" alt="logo"/>
 	</div>
 </div>

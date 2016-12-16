@@ -1,8 +1,45 @@
+body{
+	font-family: 'Open Sans', sans-serif;
+}
 .main{
-    margin-left: 50px;
+	margin-left: 50px;
 }
 
 .imgRestrict{
-    max-height: 200px;
-    max-width: 450px;
+	max-height: 200px;
+	max-width: 450px;
+}
+
+.header{
+	height: 100px;
+	background-color: #a8a8a8;
+	width: 100%;
+	padding: 10px;
+}
+
+.cart_wrapper{
+	color: #373037;
+	display: inline-block;
+}
+
+.cart_wrapper i{
+	font-size: 60px;
+}
+
+.header .logo{
+	float: right;
+	display: inline-block;
+	max-height: 80px;
+}
+
+.cart_wrapper p{
+	background-color: #dadada;
+	border-radius: 50%;
+	color: #373037;
+	height: 27px;
+	width: 27px;
+	text-align: center;
+	padding-top: 2px;
+	margin-top: -41px;
+	position: relative;
 }
