@@ -35,50 +35,80 @@ function getChair(id) {
 	switch(id){
 		case(1):
             return {
-                'title': 'Quel est la capital de l\'Ouzbékistan ?',
-                'errorMessage' : 'Try again!',
-                'imageURL': null,
-                'response1': 'Tachkent',
-                'response2': 'Alimbaba',
-                'response3': 'La réponse C',
-                'validResponseId': 1,
-                'score': 150,
-                'activated': true,
-                'id': id
+                'id': id,
+                'name': 'Ingolf',
+                'description' : 'Chaise, blanc',
+                'imageURL': 'http://www.ikea.com/fr/fr/images/products/ingolf-chaise-blanc__0454095_PE602593_S4.JPG',
+                'type': 'Fonctionnel',
+                'color': 'Blanc',
+                'code': '#FFFFFF',
+                'price': 550,
+                'material': 'Bois massif',
+                'reference': 15244
             };
         case(2):
             return {
-                'title': 'Quel est la couleur du cheval blanc d\'Henry IV ?',
-                'errorMessage' : 'Try again!',
-                'imageURL': null,
-                'response1': 'Bleu',
-                'response2': 'Vert',
-                'response3': '42',
-                'validResponseId': 2,
-                'score': 200,
-                'activated': true,
-                'id': id
+                'id': id,
+                'name': 'BÖRJE',
+                'description' : 'Chaise, brun, Gobo blanc',
+                'imageURL': 'http://www.ikea.com/fr/fr/images/products/borje-chaise-blanc__0121732_PE278342_S4.JPG',
+                'type': 'Confort',
+                'color': 'Marron',
+                'code': '#a8572e',
+                'price': 399,
+                'material': '100% coton',
+                'reference': 48775
             };
         case(3):
             return {
-                'title': 'Combien font 1 + 1 ?',
-                'errorMessage' : 'Try again!',
-                'imageURL': null,
-                'response1': '11',
-                'response2': 'Pi/4',
-                'response3': 'Racine carrée de 2 au carré',
-                'validResponseId': 3,
-                'score': 4.5,
-                'activated': true,
-                'id': id
+                'id': id,
+                'name': 'DXRacer Gaming Chair',
+                'description' : 'Chaise gaming professionnelle, se penche jusqu\'a 30°',
+                'imageURL': 'http://images.dxracer-europe.com/data/product/390f660/dxracer_tank_gaming_chair__ohtc29ne.jpg',
+                'type': 'Gaming',
+                'color': 'Vert',
+                'code': '#1b9532',
+                'price': 5490,
+                'material': 'Cuir',
+                'reference': 96154
+            };
+        case(4):
+            return {
+                'id': id,
+                'name': 'Fauteuil oeuf patchwork multicolore',
+                'description' : 'Posé sur un socle rond en métal pour garantir sa stabilité, ce fauteuil design allie à la fois confort et modernité.',
+                'imageURL': 'http://www.so-inside.com/media/fauteuil_oeuf_patchwork_arne_jacobsen__002663500_0950_29042015.jpg',
+                'type': 'Design',
+                'color': 'white',
+                'code': '#FFFFFF',
+                'price': 4290,
+                'material': 'Mousse polyuréthane et tissu patchwork',
+                'reference': 62115
+            };
+        case(5):
+            return {
+                'id': id,
+                'name': 'Confetti',
+                'description' : 'Chaises pliantes de jardin en métal rouge',
+                'imageURL': 'http://www.maisonsdumonde.com/img/2-chaises-pliantes-de-jardin-en-metal-rouge-confetti-1000-8-32-155422_3.jpg',
+                'type': 'Extérieur',
+                'color': 'white',
+                'code': '#FFFFFF',
+                'price': 499,
+                'material': 'Métal',
+                'reference': 78445
             };
 	}
 }
 
 function getAll() {
-	return {
-		'id': '5XtrTRSD9uoTGO111fOcuHIgXdNiKuVhVHxFSdiKWFnPcf0xzMYicFuIwJvE5K7w',
-		'ttl': 1209600,
-		'userId': userId
-	};
+    var chairs      = {};
+    var chairsArray = [];
+
+    for(var i = 0; i < 6; i++){
+        chairsArray.push(getChair(i));
+    }
+
+    chairs.chairs = chairsArray;
+    return chairs;
 }
