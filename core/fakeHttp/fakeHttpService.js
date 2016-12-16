@@ -37,9 +37,13 @@ angular.module('chairApp')
 });
 
 function getChair(id) {
-	switch(id){
-		case(15244):
-            return {
+    return getAllChairs().chairs[id];
+}
+
+function getAllChairs() {
+    return {
+        'chairs':[
+            {
                 'reference': 15244,
                 'name': 'Ingolf',
                 'description' : 'Chaise, blanc',
@@ -49,9 +53,8 @@ function getChair(id) {
                 'code': '#FFFFFF',
                 'price': 550,
                 'material': 'Bois massif'
-            };
-        case(48775):
-            return {
+            },
+            {
                 'reference': 48775,
                 'name': 'BÖRJE',
                 'description' : 'Chaise, brun, Gobo blanc',
@@ -61,9 +64,8 @@ function getChair(id) {
                 'code': '#a8572e',
                 'price': 399,
                 'material': '100% coton'
-            };
-        case(96154):
-            return {
+            },
+            {
                 'reference': 78445,
                 'name': 'DXRacer Gaming Chair',
                 'description' : 'Chaise gaming professionnelle, se penche jusqu\'a 30°',
@@ -73,22 +75,20 @@ function getChair(id) {
                 'code': '#1b9532',
                 'price': 5490,
                 'material': 'Cuir'
-            };
-        case(62115):
-            return {
-                'reference': 78445,
-                'name': 'Fauteuil oeuf patchwork multicolore',
-                'description': 'Posé sur un socle rond en métal pour garantir sa stabilité, ce fauteuil design allie à la fois confort et modernité.',
-                'imageURL': 'http://www.so-inside.com/media/fauteuil_oeuf_patchwork_arne_jacobsen__002663500_0950_29042015.jpg',
-                'type': 'Design',
-                'color': 'white',
-                'code': '#FFFFFF',
-                'price': 4290,
-                'material': 'Mousse polyuréthane et tissu patchwork'
-            };
-        case(78445):
-            return {
-                'reference': 78445,
+            },
+            {
+                'reference': 65341,
+                'name': 'DXRacer Gaming Chair',
+                'description' : 'Chaise gaming professionnelle, se penche jusqu\'a 30°',
+                'imageURL': 'http://images.dxracer-europe.com/data/product/390f660/dxracer_tank_gaming_chair__ohtc29ne.jpg',
+                'type': 'Gaming',
+                'color': 'Vert',
+                'code': '#1b9532',
+                'price': 5490,
+                'material': 'Cuir'
+            },
+            {
+                'reference': 12441,
                 'name': 'Confetti',
                 'description' : 'Chaises pliantes de jardin en métal rouge',
                 'imageURL': 'http://www.maisonsdumonde.com/img/2-chaises-pliantes-de-jardin-en-metal-rouge-confetti-1000-8-32-155422_3.jpg',
@@ -97,18 +97,8 @@ function getChair(id) {
                 'code': '#FFFFFF',
                 'price': 499,
                 'material': 'Métal'
-            };
-	}
-}
+            }
 
-function getAllChairs() {
-    var chairs      = {};
-    var chairsArray = [];
-
-    for(var i = 1; i < 6; i++){
-        chairsArray.push(getChair(i));
+        ]
     }
-
-    chairs.chairs = chairsArray;
-    return chairs;
 }
