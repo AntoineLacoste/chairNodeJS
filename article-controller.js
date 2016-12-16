@@ -3,7 +3,7 @@
 angular.module('chairApp')
     .controller('ArticleController', ['$scope', 'fakeHttp', '$routeParams', function ($scope, fakeHttp, $routeParams) {
         // Variables globales
-        fakeHttp.get('/chair/' + $routeParams.reference).then(
+        fakeHttp.get('/article/' + $routeParams.reference).then(
             function (response) {
                 $scope.article = response.data;
             },
