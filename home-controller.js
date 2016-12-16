@@ -14,7 +14,7 @@ angular.module('chairApp')
 	});
 
 	$scope.goTo = function(reference){
-		$location.path('#/article/' + reference);
+		$location.path('/article/' + reference);
 	}
 
 }]);
