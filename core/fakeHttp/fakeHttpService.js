@@ -38,9 +38,9 @@ angular.module('chairApp')
 
 function getChair(id) {
 	switch(id){
-		case(1):
+		case(15244):
             return {
-                'id': id,
+                'reference': 15244,
                 'name': 'Ingolf',
                 'description' : 'Chaise, blanc',
                 'imageURL': 'http://www.ikea.com/fr/fr/images/products/ingolf-chaise-blanc__0454095_PE602593_S4.JPG',
@@ -48,12 +48,11 @@ function getChair(id) {
                 'color': 'Blanc',
                 'code': '#FFFFFF',
                 'price': 550,
-                'material': 'Bois massif',
-                'reference': 15244
+                'material': 'Bois massif'
             };
-        case(2):
+        case(48775):
             return {
-                'id': id,
+                'reference': 48775,
                 'name': 'BÖRJE',
                 'description' : 'Chaise, brun, Gobo blanc',
                 'imageURL': 'http://www.ikea.com/fr/fr/images/products/borje-chaise-blanc__0121732_PE278342_S4.JPG',
@@ -61,12 +60,11 @@ function getChair(id) {
                 'color': 'Marron',
                 'code': '#a8572e',
                 'price': 399,
-                'material': '100% coton',
-                'reference': 48775
+                'material': '100% coton'
             };
-        case(3):
+        case(96154):
             return {
-                'id': id,
+                'reference': 78445,
                 'name': 'DXRacer Gaming Chair',
                 'description' : 'Chaise gaming professionnelle, se penche jusqu\'a 30°',
                 'imageURL': 'http://images.dxracer-europe.com/data/product/390f660/dxracer_tank_gaming_chair__ohtc29ne.jpg',
@@ -74,25 +72,23 @@ function getChair(id) {
                 'color': 'Vert',
                 'code': '#1b9532',
                 'price': 5490,
-                'material': 'Cuir',
-                'reference': 96154
+                'material': 'Cuir'
             };
-        case(4):
+        case(62115):
             return {
-                'id': id,
+                'reference': 78445,
                 'name': 'Fauteuil oeuf patchwork multicolore',
-                'description' : 'Posé sur un socle rond en métal pour garantir sa stabilité, ce fauteuil design allie à la fois confort et modernité.',
+                'description': 'Posé sur un socle rond en métal pour garantir sa stabilité, ce fauteuil design allie à la fois confort et modernité.',
                 'imageURL': 'http://www.so-inside.com/media/fauteuil_oeuf_patchwork_arne_jacobsen__002663500_0950_29042015.jpg',
                 'type': 'Design',
                 'color': 'white',
                 'code': '#FFFFFF',
                 'price': 4290,
-                'material': 'Mousse polyuréthane et tissu patchwork',
-                'reference': 62115
+                'material': 'Mousse polyuréthane et tissu patchwork'
             };
-        case(5):
+        case(78445):
             return {
-                'id': id,
+                'reference': 78445,
                 'name': 'Confetti',
                 'description' : 'Chaises pliantes de jardin en métal rouge',
                 'imageURL': 'http://www.maisonsdumonde.com/img/2-chaises-pliantes-de-jardin-en-metal-rouge-confetti-1000-8-32-155422_3.jpg',
@@ -100,8 +96,7 @@ function getChair(id) {
                 'color': 'white',
                 'code': '#FFFFFF',
                 'price': 499,
-                'material': 'Métal',
-                'reference': 78445
+                'material': 'Métal'
             };
 	}
 }
