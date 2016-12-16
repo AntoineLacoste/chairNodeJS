@@ -5,10 +5,10 @@ angular.module('chairApp')
 
 	this.get = function(url) {
 		var deferred = $q.defer();
-		var regex = new RegExp(apiBaseURL + '\/chair\/\d');
+		var regex = new RegExp(apiBaseURL + '\/chair\/[0-9]+$');
 		if (url.match(regex)) {
 			deferred.resolve({
-			    data:getChair(url.substr((apiBaseURL + '/chaise/').length))
+			    data:getChair(url.substr((apiBaseURL + '/chair/').length))
 			});
 		} else {
 			deferred.reject("Invalid url"); 
