@@ -11,6 +11,10 @@ angular.module('chairApp')
 		controller: 'ArticleController',
 		templateUrl:  'article.html'
 	})
+	.when('/cart', {
+		controller: 'CartController',
+		templateUrl:  'cart.html'
+	})
 	.otherwise({
 		redirectTo: '/'
 	})

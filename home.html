@@ -2,6 +2,9 @@
 <div>
 	<h1>Chair appli</h1>
 	<div class="wrapper_content">
+		<button ng-click='add()'>ADD</button>
+		<button ng-click="add2()">ADD2</button>
+		<button ng-click='get()'>GET</button>
 		<div ng-repeat="item in itemsToDisplay track by $index" class="wrapper_item cursor_pointer col-md-4 col-sm-6 col-xs-12">
 			<div ng-click="goTo(item.reference)">
 				<img class="item_picture" ng-src="{{item.imageURL}}">

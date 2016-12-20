@@ -1,9 +1,11 @@
 'use strict';
 
 angular.module('chairApp')
-.controller('HomeController', ['$scope', 'fakeHttp', '$location', function ($scope, fakeHttp, $location) {
+.controller('HomeController', ['$scope', 'fakeHttp', 'routing', 'localStorage', function ($scope, fakeHttp, routing, localStorage) {
+
 	// Variables globales
-	$scope.itemsInCart = [];
+	var cart = 'cart';
+	$scope.itemsInCart = localStorage.get(cart);
 	$scope.itemsToDisplay = [];
 
 	fakeHttp.get('/article/getallchairs').then(function(response){
@@ -14,7 +16,17 @@ angular.module('chairApp')
 	});
 
 	$scope.goTo = function(reference){
-		$location.path('/article/' + reference);
+		routing.changeURL(reference);
+	}
+
+	$scope.add = function(){
+		localStorage.set(45);
+	}
+	$scope.add2 = function(){
+		localStorage.set(2);
+	}
+	$scope.get = function(){
+		console.log(localStorage.get(cart));
 	}
 
 }]);
