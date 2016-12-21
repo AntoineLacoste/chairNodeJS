@@ -1,6 +1,25 @@
 <header-top></header-top>
-<div>
-    <h1>Article {{ article.name }}</h1>
-    <img ng-src="{{ article.imageURL }}">
-    <a ng-href="#/" class="waves-effect waves-light btn">Précédent</a>
+<div class="larger-mid">
+    <div class="row">
+        <a ng-href="#/" class="waves-effect waves-light btn col s1 buttonPrevious"><p>Précédent</p></a>
+        <h1 class="titleArticle col s4">Chaise {{ article.name }}</h1>
+    </div>
+
+    <div class="row item_description col s6 offset-s7">
+    </div>
+
+    <div class="row">
+        <div class="col s5">
+            <img class ="item_img" ng-src="{{article.imageURL}}"></div>
+        <div class="col s4">
+            <p>{{ article.description }}</p>
+            <button class="addToCartButton waves-effect waves-light btn col s8" ng-click="addToCart()">Ajouter au panier</button>
+        </div>
+    </div>
+
+    <div class="item_info col-md-4">
+        <h2 class="col-md-8 col-sm-8 col-xs-8">{{article.name}}</h2>
+        <p class="col-md-4 col-sm-4 col-xs-4">{{article.price}}€</p>
+    </div>
+
 </div>

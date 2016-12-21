@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('chairApp')
-    .controller('ArticleController', ['$scope', 'fakeHttp', '$routeParams', function ($scope, fakeHttp, $routeParams) {
+    .controller('ArticleController', ['$scope', 'fakeHttp', '$routeParams', 'localStorage', function ($scope, fakeHttp, $routeParams, localStorage) {
         // Variables globales
         fakeHttp.get('/article/' + $routeParams.reference).then(
             function (response) {
@@ -11,6 +11,15 @@ angular.module('chairApp')
             function (error) {
                 console.log(error);
             }
-        )
+        );
 
+        $scope.addToCart = function () {
+            localStorage.init();
+            localStorage.set($scope.article.reference);
+            var localArray = localStorage.get();
+            for(var i = 0; i < localArray.length; i++){
+                console.log(localArray[i]);
+
+            }
+        };
     }]);

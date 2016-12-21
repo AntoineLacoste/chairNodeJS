@@ -99,3 +99,25 @@ p{
 	padding-left: 0;
 	padding-right: 0;
 }
+
+.buttonPrevious{
+	margin-right: 15px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.buttonPrevious p{
+    line-height: 35px;
+}
+
+.titleArticle{
+	margin-bottom: 15px;
+}
+
+.item_img{
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.addToCartButton{
+    height: 500px;
+}

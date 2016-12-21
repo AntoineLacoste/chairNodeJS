@@ -4,6 +4,10 @@ angular.module('chairApp')
 .service('localStorage', [function() {
 
 
+	this.init = function () {
+        localStorage.clear();
+    };
+
 	this.get = function(){
 		return JSON.parse(localStorage.getItem('cart'));
 	};
@@ -19,13 +23,13 @@ angular.module('chairApp')
 				}
 			}
 			if(!added){
-				var itemToAdd = {id : item,qty : 1};
+				var itemToAdd = {id : item, qty : 1};
 				currentCart.push(itemToAdd);
 			}
 		}
 		else{
 			currentCart = [];
-			var itemToAdd = {id : item,qty : 1};
+			var itemToAdd = {id : item, qty : 1};
 			currentCart.push(itemToAdd);
 		}
 
