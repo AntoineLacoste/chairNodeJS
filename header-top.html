@@ -1,11 +1,11 @@
 <div class="header">
-	<div>
-		<div ng-click="goTo('cart')" class="cart_wrapper col-xs-3">
+	<div class="row">
+		<div ng-click="goTo('cart')" class="cart_wrapper col s3 cursor_pointer">
 			<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 			<p>{{itemsInCart.length}}</p>
 		</div>
-		<div class="col-xs-9">
-			<img class="logo" src="img/logo.png" alt="logo"/>
+		<div class="col s9">
+			<img ng-click="goTo('home')" class="logo cursor_pointer" src="img/logo.png" alt="logo"/>
 		</div>
 	</div>
 </div>

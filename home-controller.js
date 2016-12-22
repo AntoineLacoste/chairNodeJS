@@ -5,6 +5,7 @@ angular.module('chairApp')
 
 	// Variables globales
 	var cart = 'cart';
+	
 	$scope.itemsInCart = localStorage.get(cart);
 	$scope.itemsToDisplay = [];
 
@@ -16,17 +17,18 @@ angular.module('chairApp')
 	});
 
 	$scope.goTo = function(reference){
+		console.log('couuco');
 		routing.changeURL(reference);
 	}
 
-	$scope.add = function(){
-		localStorage.set(45);
-	}
-	$scope.add2 = function(){
-		localStorage.set(2);
-	}
-	$scope.get = function(){
-		console.log(localStorage.get(cart));
-	}
+	// $scope.add = function(){
+	// 	localStorage.set(45);
+	// }
+	// $scope.add2 = function(){
+	// 	localStorage.set(2);
+	// }
+	// $scope.get = function(){
+	// 	console.log(localStorage.get(cart));
+	// }
 
 }]);

@@ -14,7 +14,7 @@ angular.module('chairApp')
         );
 
         $scope.addToCart = function () {
-            localStorage.init();
+            // localStorage.init();
             localStorage.set($scope.article.reference);
             var localArray = localStorage.get();
             for(var i = 0; i < localArray.length; i++){

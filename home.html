@@ -1,16 +1,16 @@
 <header-top></header-top>
 <div>
-	<h1>Chair appli</h1>
-	<div class="wrapper_content">
-		<button ng-click='add()'>ADD</button>
+	<h1>Tous les types et gammes de chaises pour un fessier heureux</h1>
+	<div class="wrapper_content row">
+		<!-- <button ng-click='add()'>ADD</button>
 		<button ng-click="add2()">ADD2</button>
-		<button ng-click='get()'>GET</button>
-		<div ng-repeat="item in itemsToDisplay track by $index" class="wrapper_item cursor_pointer col-md-4 col-sm-6 col-xs-12">
+		<button ng-click='get()'>GET</button> -->
+		<div ng-repeat="item in itemsToDisplay track by $index" class="wrapper_item cursor_pointer col l4 m6 s12">
 			<div ng-click="goTo(item.reference)">
 				<img class="item_picture" ng-src="{{item.imageURL}}">
-				<div class="item_info col-md-12">
-					<h2 class="col-md-8 col-sm-8 col-xs-8">{{item.name}}</h2>
-					<p class="col-md-4 col-sm-4 col-xs-4">{{item.price}}€</p>
+				<div class="item_info col s12">
+					<h2 class="back_grey col l9 m9 s9">{{item.name}}</h2>
+					<p class="back_purple col l3 m3 s3">{{item.price}}€</p>
 				</div>
 			</div>
 		</div>

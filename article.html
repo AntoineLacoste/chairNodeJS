@@ -1,25 +1,26 @@
 <header-top></header-top>
-<div class="larger-mid">
+<div>
+    <a ng-href="#/" class="waves-effect waves-light btn col s1 previousButton"><p>Retourner à la liste des articles</p></a>
     <div class="row">
-        <a ng-href="#/" class="waves-effect waves-light btn col s1 buttonPrevious"><p>Précédent</p></a>
-        <h1 class="titleArticle col s4">Chaise {{ article.name }}</h1>
-    </div>
-
-    <div class="row item_description col s6 offset-s7">
-    </div>
-
-    <div class="row">
-        <div class="col s5">
-            <img class ="item_img" ng-src="{{article.imageURL}}"></div>
-        <div class="col s4">
-            <p>{{ article.description }}</p>
-            <button class="addToCartButton waves-effect waves-light btn col s8" ng-click="addToCart()">Ajouter au panier</button>
+        <div class="center border col s12 m6 l6">
+            <img class ="item_img" ng-src="{{article.imageURL}}">
+        </div>
+        <div class="col s12 m6 l6">
+            <div class="small_padding article_description">
+                <h1>{{ article.name }}</h1>
+                <p>{{ article.description }}</p>
+                <p><span>Type :</span> {{ article.type }}</p>
+                <p><span>Coloris :</span> {{ article.color }}</p>
+                <p><span>Matière :</span> {{ article.material }}</p>
+                <p><span>Référence :</span> {{ article.reference }}</p>
+            </div>
+            <div class="back_grey price center col s12 m12 l12">
+                <p>{{ article.price }}€</p>
+            </div>
+            <div class="back_purple col s12 m12 l12">
+                <button class="addToCartButton waves-effect waves-light btn" ng-click="addToCart()">Ajouter au panier</button>
+            </div>
         </div>
     </div>
-
-    <div class="item_info col-md-4">
-        <h2 class="col-md-8 col-sm-8 col-xs-8">{{article.name}}</h2>
-        <p class="col-md-4 col-sm-4 col-xs-4">{{article.price}}€</p>
-    </div>
-
+</div>
 </div>

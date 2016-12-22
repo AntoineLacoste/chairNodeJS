@@ -7,6 +7,9 @@ angular.module('chairApp')
 		if(path === 'cart'){
 			$location.path('/cart');			
 		}
+		else if(path === 'home'){
+			$location.path('/');
+		}
 		else{
 			$location.path('/article/' + path);			
 		}

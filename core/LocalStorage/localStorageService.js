@@ -4,9 +4,9 @@ angular.module('chairApp')
 .service('localStorage', [function() {
 
 
-	this.init = function () {
-        localStorage.clear();
-    };
+	// this.init = function () {
+ //        localStorage.clear();
+ //    };
 
 	this.get = function(){
 		return JSON.parse(localStorage.getItem('cart'));
