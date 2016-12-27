@@ -4,9 +4,12 @@ angular.module('chairApp')
 .service('localStorage', [function() {
 
 
-	// this.init = function () {
- //        localStorage.clear();
- //    };
+	this.init = function () {
+		if(this.get() === null){
+			var LS = [];
+			localStorage.setItem('cart', JSON.stringify(LS));
+		}
+	};
 
 	this.get = function(){
 		return JSON.parse(localStorage.getItem('cart'));
@@ -17,19 +20,21 @@ angular.module('chairApp')
 		var added = false;
 		if(currentCart != null){
 			for(var i=0; i<currentCart.length;i++){
-				if(currentCart[i].id == item){
+				if(currentCart[i].reference == item.reference){
 					currentCart[i].qty++;
 					added = true;
 				}
 			}
 			if(!added){
-				var itemToAdd = {id : item, qty : 1};
+				var itemToAdd = item;
+				itemToAdd.qty = 1;
 				currentCart.push(itemToAdd);
 			}
 		}
 		else{
 			currentCart = [];
-			var itemToAdd = {id : item, qty : 1};
+			var itemToAdd = item;
+			itemToAdd.qty = 1;
 			currentCart.push(itemToAdd);
 		}
 

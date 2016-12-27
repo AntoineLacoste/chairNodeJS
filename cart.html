@@ -1,4 +1,19 @@
 <header-top></header-top>
 
 <h1>Panier</h1>
-<p>{{cart}}</p>
+<div class="row">
+	<div class="col s12 m12 l12 cart_article" ng-repeat="article in cart track by $index">
+		<img ng-src="{{article.imageURL}}">
+		<h2>{{article.name}}</h2>
+		<p class="price">{{article.price}} €</p> 
+		<div class="col s12">
+			<p class="quantity">Quantité :</p>
+			<form>
+				<input ng-model="quantity" id="quantity" type="quantity" class="validate">
+				<label for="quantity">Email</label>
+			</form>
+			<button class="waves-effect waves-light btn">Mettre à jour</button>
+			<button class="waves-effect waves-light btn">Supprimer</button>
+		</div>
+	</div>
+</div>

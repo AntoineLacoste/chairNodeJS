@@ -166,6 +166,7 @@ p{
 	background-color: #373037;
 	font-size: 26px;
 	padding: 0 5px;
+	text-transform: initial;
 }
 
 .previousButton.btn{
@@ -173,6 +174,42 @@ p{
 	background-color: #373037;
 	font-size: 18px;
 	padding: 0 5px;
+	text-transform: initial;
 }
 
 /* PAGE PANIER */
+
+.cart_article{
+	padding: 10px !important;
+}
+
+.cart_article img{
+	width: 80px !important;
+	height: auto;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px; 
+}
+
+.cart_article h2{
+	font-size: 16px;
+	clear: right;
+	padding-top: 10px;
+}
+
+.cart_article p{
+	display: inline-block;
+}
+
+.cart_article .price{
+	text-align: right;
+}
+
+
+div.cart_article:nth-child(odd){
+	background-color: #dadada;
+}
+
+div.cart_article:nth-child(even){
+	background-color: #a8a8a8;
+}
