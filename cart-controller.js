@@ -5,17 +5,16 @@ angular.module('chairApp')
 
 	var cart = 'cart';
 	$scope.cart = localStorage.get(cart);
+	$scope.test = 13;
 
-	// for (var i=0; i<LS.length; i++) {
-	// 	console.log('ID : ' + LS[i].id);
-	// 	console.log('QTY : ' + LS[i].qty);
-	// }
+	$scope.deleteItem = function(reference){
+		localStorage.remove(reference);
+		$scope.apply();
+	};
 
-	fakeHttp.get('/article/getallchairs').then(function(response){
-		$scope.itemsToDisplay = response.data.chairs;
-		// console.log($scope.itemsToDisplay);
-	}, function(error){
-		console.log(error);
-	});
+	$scope.refreshCart = function(reference, qty){
+		localStorage.refresh(reference, qty);
+		$scope.apply();
+	};
 
 }]);

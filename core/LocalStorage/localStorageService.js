@@ -41,4 +41,30 @@ angular.module('chairApp')
 
 		localStorage.setItem('cart', JSON.stringify(currentCart));
 	};
+
+	this.remove = function(reference){
+		var currentCart = this.get();
+		if(currentCart != null){
+			for(var i=0; i<currentCart.length;i++){
+				if(currentCart[i].reference == reference){
+					currentCart.splice(i, 1);
+					localStorage.setItem('cart', JSON.stringify(currentCart));
+					return;
+				}
+			}
+		}
+	}
+
+	this.refresh = function(reference, qty){
+		var currentCart = this.get();
+		if(currentCart != null){
+			for(var i=0; i<currentCart.length;i++){
+				if(currentCart[i].reference == reference){
+					currentCart[i].qty = qty;
+					localStorage.setItem('cart', JSON.stringify(currentCart));
+					return;
+				}
+			}
+		}
+	}
 }]);

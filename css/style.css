@@ -161,7 +161,7 @@ p{
 	font-size: 24px;
 }
 
-.addToCartButton.btn{
+.addToCartButton.btn, .deleteItem.btn, .refreshCart.btn{
 	width: 100%;
 	background-color: #373037;
 	font-size: 26px;
@@ -181,6 +181,7 @@ p{
 
 .cart_article{
 	padding: 10px !important;
+	border-bottom: 3px solid #373037;
 }
 
 .cart_article img{
@@ -206,10 +207,18 @@ p{
 }
 
 
-div.cart_article:nth-child(odd){
+div.cart_article{
 	background-color: #dadada;
 }
 
-div.cart_article:nth-child(even){
+/*div.cart_article:nth-child(even){
 	background-color: #a8a8a8;
+}*/
+
+select{
+	display: inline-block;
+}
+
+form label{
+	color: #373037;
 }
