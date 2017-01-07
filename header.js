@@ -8,6 +8,7 @@ angular.module('chairApp')
 		controller : ['$scope', 'routing', 'localStorage', function($scope, routing, localStorage){
 			var cart = 'cart';
 			$scope.itemsInCart = localStorage.get(cart);
+			$scope.numberOfItems = localStorage.getNumberOfItems();
 			$scope.goTo = function(reference){
 				routing.changeURL(reference);
 			}	

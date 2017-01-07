@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('chairApp')
-.service('localStorage', [function() {
+.service('localStorage', ['$q', function($q) {
 
 
 	this.init = function () {
@@ -16,6 +16,7 @@ angular.module('chairApp')
 	};
 
 	this.set = function(item){
+		var defer = $q.defer();
 		var currentCart = this.get();
 		var added = false;
 		if(currentCart != null){
@@ -37,12 +38,23 @@ angular.module('chairApp')
 			itemToAdd.qty = 1;
 			currentCart.push(itemToAdd);
 		}
-
-
 		localStorage.setItem('cart', JSON.stringify(currentCart));
+		console.log('--- set LocalStorage Done ---');
+		defer.resolve();
+		return defer.promise;
 	};
 
+	this.getNumberOfItems = function(){
+		var items = JSON.parse(localStorage.getItem('cart'));
+		var numberOfItems = 0;
+		items.forEach(function(item){
+			numberOfItems += item.qty;
+		});
+		return numberOfItems;
+	}
+
 	this.remove = function(reference){
+		var defer = $q.defer();
 		var currentCart = this.get();
 		if(currentCart != null){
 			for(var i=0; i<currentCart.length;i++){
@@ -53,9 +65,13 @@ angular.module('chairApp')
 				}
 			}
 		}
+		console.log('--- Remove LocalStorage Done ---');
+		defer.resolve();
+		return defer.promise;
 	}
 
 	this.refresh = function(reference, qty){
+		var defer = $q.defer();
 		var currentCart = this.get();
 		if(currentCart != null){
 			for(var i=0; i<currentCart.length;i++){
@@ -66,5 +82,8 @@ angular.module('chairApp')
 				}
 			}
 		}
+		console.log('--- Refresh LocalStorage Done ---');
+		defer.resolve();
+		return defer.promise;
 	}
 }]);
