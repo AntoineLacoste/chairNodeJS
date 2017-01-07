@@ -161,7 +161,7 @@ p{
 	font-size: 24px;
 }
 
-.addToCartButton.btn, .deleteItem.btn, .refreshCart.btn{
+.addToCartButton.btn, .deleteItem.btn, .refreshCart.btn, .pay.btn{
 	width: 100%;
 	background-color: #373037;
 	font-size: 26px;
@@ -221,4 +221,8 @@ select{
 
 form label{
 	color: #373037;
+}
+
+.paiment_info{
+	margin-top: 20px;
 }

@@ -5,7 +5,7 @@ angular.module('chairApp')
 
 	var cart = 'cart';
 	$scope.cart = localStorage.get(cart);
-	$scope.test = 13;
+	$scope.form = {};
 
 	$scope.deleteItem = function(reference){
 		localStorage.remove(reference);
@@ -14,5 +14,10 @@ angular.module('chairApp')
 	$scope.refreshCart = function(reference, qty){
 		localStorage.refresh(reference, qty);
 	};
+
+	$scope.pay = function(){
+		console.log('Commande passée');
+		console.log($scope.form);
+	}
 
 }]);
