@@ -42,6 +42,10 @@ p{
 	color: #ffffff;
 }
 
+.back_darkgrey{
+	background-color: #a8a8a8;	
+}
+
 .small_padding{
 	padding: 10px 30px;
 }
@@ -181,7 +185,7 @@ p{
 
 .cart_article{
 	padding: 10px !important;
-	border-bottom: 3px solid #373037;
+	border-top: 3px solid #373037;
 }
 
 .cart_article img{
@@ -211,10 +215,6 @@ div.cart_article{
 	background-color: #dadada;
 }
 
-/*div.cart_article:nth-child(even){
-	background-color: #a8a8a8;
-}*/
-
 select{
 	display: inline-block;
 }
@@ -224,5 +224,10 @@ form label{
 }
 
 .paiment_info{
-	margin-top: 20px;
+	border-top: 3px solid #373037;
+	padding-top: 10px !important;
+}
+
+.refreshCart.btn{
+	font-size: 15px;
 }

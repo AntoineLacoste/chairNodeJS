@@ -9,10 +9,13 @@ angular.module('chairApp')
 
 	$scope.deleteItem = function(reference){
 		localStorage.remove(reference);
+		$scope.cart = localStorage.get(cart);
+		$scope.numberOfItems = localStorage.getNumberOfItems();
 	};
 
 	$scope.refreshCart = function(reference, qty){
 		localStorage.refresh(reference, qty);
+		$scope.numberOfItems = localStorage.getNumberOfItems();
 	};
 
 	$scope.pay = function(){
