@@ -1,16 +1,17 @@
 'use strict';
 
 angular.module('chairApp')
-.controller('HomeController', ['$scope', 'fakeHttp', 'routing', 'localStorage', function ($scope, fakeHttp, routing, localStorage) {
+.controller('HomeController', ['$scope', 'routing', 'localStorage', '$http', function ($scope, routing, localStorage, $http) {
 	
 	// Initialisation de l'application
 	localStorage.init();
 	var cart = 'cart';
+	var apiURL = 'http://localhost:1337/api';
 	
 	$scope.itemsToDisplay = [];
 
-	fakeHttp.get('/article/getallchairs').then(function(response){
-		$scope.itemsToDisplay = response.data.chairs;
+	$http.get( apiURL + '/chairs' ).then( function(res){
+		$scope.itemsToDisplay = res.data.data;
 	}, function(error){
 		console.log(error);
 	});
@@ -19,12 +20,6 @@ angular.module('chairApp')
 		routing.changeURL(reference);
 	}
 
-	$scope.add = function(){
-		localStorage.set(45);
-	}
-	$scope.add2 = function(){
-		localStorage.set(2);
-	}
 	$scope.get = function(){
 		console.log(localStorage.get(cart));
 	}

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('chairApp')
-.controller('CartController', ['$scope', 'fakeHttp', 'routing', 'localStorage', function ($scope, fakeHttp, routing, localStorage) {
+.controller('CartController', ['$scope', 'localStorage', function ($scope, localStorage) {
 
 	var cart = 'cart';
 	$scope.cart = localStorage.get(cart);
