@@ -1,11 +1,9 @@
 'use strict';
 
 angular.module('chairApp')
-    .controller('ArticleController', ['$scope', '$http', '$routeParams', 'localStorage', function ($scope, $http, $routeParams, localStorage) {
+    .controller('ArticleController', ['$scope', '$http', '$routeParams', 'localStorage', '$rootScope', function ($scope, $http, $routeParams, localStorage, $rootScope) {
         
-        var apiURL = 'http://localhost:1337/api';
-
-        $http.get( apiURL + '/chairs/' + $routeParams.reference).then(
+        $http.get( $rootScope.apiURL + '/chairs/' + $routeParams.reference).then(
             function (response) {
                 $scope.article = response.data.data[0];
                 console.log($scope.article);

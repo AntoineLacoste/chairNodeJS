@@ -1,9 +1,8 @@
 'use strict';
 
 angular.module('chairApp')
-.controller('CartController', ['$scope', 'localStorage', '$http', function ($scope, localStorage, $http) {
+.controller('CartController', ['$scope', '$rootScope', 'localStorage', '$http', function ($scope, $rootScope, localStorage, $http) {
 	var cart = 'cart';
-	var apiURL = 'http://localhost:1337/api';
 	$scope.cart = localStorage.get(cart);
 	$scope.form = {};
 	$scope.form.titulary = "JOJO";
@@ -23,7 +22,7 @@ angular.module('chairApp')
 	};
 
 	$scope.pay = function(){
-		$http.post(apiURL + '/paiment',$scope.form).then(function(res){
+		$http.post($rootScope.apiURL + '/paiment',$scope.form).then(function(res){
 			if( res.data.valid ){
 			}
 			else{
