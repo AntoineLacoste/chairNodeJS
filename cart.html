@@ -1,40 +1,42 @@
 <header-top></header-top>
-
-<h1>Panier</h1>
-<div class="row">
-	<div class="col s12 m12 l12 cart_article" ng-repeat="article in cart track by $index">
-		<img ng-src="{{article.imageURL}}">
-		<h2>{{article.name}}</h2>
-		<p class="price">{{article.price}} €</p> 
-		<div class="col s12">
-			<form class="col s12">
-				<label for="qty">Quantité :</label>
-				<input type="number" min="1" max="10" name="qty" id="qty" ng-model="article.qty">		
-			</form>
-			<button ng-click="refreshCart(article.reference, article.qty)" class="waves-effect waves-light refreshCart btn col s5">Mettre à jour</button>
-			<button ng-click="deleteItem(article.reference)" class="waves-effect waves-light deleteItem btn col s5 offset-s2">
-				<i class="fa fa-trash-o" aria-hidden="true"></i>
-			</button>
+<div class="body-wrapper">
+	<h1>Panier</h1>
+	<div class="row">
+		<div class="col s12 m12 l12 cart_article" ng-repeat="article in cart track by $index">
+			<img ng-src="{{article.imageURL}}">
+			<h2>{{article.name}}</h2>
+			<p class="price">{{article.price}} €</p> 
+			<div class="col s12">
+				<form class="col s12">
+					<label for="qty">Quantité :</label>
+					<input type="number" min="1" max="10" name="qty" id="qty" ng-model="article.qty">		
+				</form>
+				<button ng-click="refreshCart(article.reference, article.qty)" class="waves-effect waves-light refreshCart btn col s5">Mettre à jour</button>
+				<button ng-click="deleteItem(article.reference)" class="waves-effect waves-light deleteItem btn col s5 offset-s2">
+					<i class="fa fa-trash-o" aria-hidden="true"></i>
+				</button>
+			</div>
 		</div>
-	</div>
 
-	<div ng-if="numberOfItems > 0" class="col s12 m12 l12 back_darkgrey paiment_info">
-		<div class="col s10 m10 l10 offset-s1 offset-m1 offset-l1">
-			<p>Informations de paiement</p>
-			<form ng-submit="pay()">
-				<label for="titulary">Titulaire de la carte</label>
-				<input type="text" name="titulary" ng-model="form.titulary" required>
+		<div ng-if="numberOfItems > 0" class="col s12 m12 l12 back_darkgrey paiment_info">
+			<div class="col s10 m10 l10 offset-s1 offset-m1 offset-l1">
+				<p>Informations de paiement</p>
+				<form ng-submit="pay()">
+					<label for="titulary">Titulaire de la carte</label>
+					<input type="text" name="titulary" ng-model="form.titulary" required>
 
-				<label for="number">Numéro</label>
-				<input type="number" name="number" ng-model="form.number" required>
+					<label for="number">Numéro</label>
+					<input type="number" name="number" ng-model="form.number" required>
 
-				<label for="expiration">Date d'expiration (format jj/mm/aaaa)</label>
-				<input type="text" name="expiration" ng-model="form.expiration" required>
+					<label for="expiration">Date d'expiration (format jj/mm/aaaa)</label>
+					<input type="text" name="expiration" ng-model="form.expiration" required>
 
-				<label for="cryptogram">Cryptogramme visuel</label>
-				<input type="text" name="cryptogram" ng-model="form.cryptogram" required>
-				<input type="submit" class="waves-effect waves-light pay btn col s12" value="Payer">
-			</form>
+					<label for="cryptogram">Cryptogramme visuel</label>
+					<input type="text" name="cryptogram" ng-model="form.cryptogram" required>
+					<input type="submit" class="waves-effect waves-light pay btn col s12" value="Payer">
+				</form>
+			</div>
 		</div>
 	</div>
 </div>
+<footer-bottom class="footer"></footer-bottom>
