@@ -37,5 +37,22 @@
 			</div>
 		</div>
 	</div>
+	<!-- Modal Structure -->
+	<div id="modal1" class="modal back_grey">
+		<div class="modal-content">
+			<div ng-if="validOrder">
+				<h4>Commande validée</h4>
+				<p>Votre commande a été enregistrée.</p>	
+			</div>
+			<div ng-if="!validOrder">
+				<h4>Commande échouée</h4>
+				<p>Votre commande à été annulée.</p>	
+				<p>Erreur : {{checkoutErrorMessage}}</p>	
+			</div>
+		</div>
+		<div class="modal-footer back_grey">
+			<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Retour accueil</a>
+		</div>
+	</div>	
 </div>
 <footer-bottom class="footer"></footer-bottom>

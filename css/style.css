@@ -34,7 +34,7 @@ p{
 }
 
 .back_grey{
-	background-color: #dadada;	
+	background-color: #dadada !important;	
 }
 
 .back_purple{
