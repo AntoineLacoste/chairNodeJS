@@ -3,7 +3,7 @@
 angular.module('chairApp')
 .controller('HomeController', ['$scope', 'routing', 'localStorage', '$http', '$rootScope', function ($scope, routing, localStorage, $http, $rootScope) {
 	
-	// Initialisation de l'application
+	// Initialisation du localStorage
 	localStorage.init();
 	var cart = 'cart';
 	
@@ -11,6 +11,8 @@ angular.module('chairApp')
 
 	$http.get( $rootScope.apiURL + '/chairs' ).then( function(res){
 		$scope.itemsToDisplay = res.data.data;
+		// Stockage de tous les items pour la recherche 
+		$rootScope.items = res.data.data;
 	}, function(error){
 		console.log(error);
 	});

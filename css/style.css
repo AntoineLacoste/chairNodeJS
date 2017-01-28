@@ -100,10 +100,25 @@ p{
 	position: relative;
 }
 
+/* SEARCH DIRECTIVE */
 
+.search-wrapper{
+	padding: 0 10px;
+}
+
+.input-field .prefix.active, label.active{
+	color: #373037;
+}
+
+.input-field.col label{
+	left: 0;
+}
+
+input#icon_prefix{
+	margin-bottom: 5px;
+}
 
 /* PAGE CATEGORIE */
-
 
 .wrapper_item{
 	text-align: center;
