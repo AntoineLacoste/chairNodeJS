@@ -1,9 +1,32 @@
 <div class="search-wrapper back_grey">
 	<div class="row">
-		<div class="input-field col s6">
+		<div class="input-field col s12">
 			<i class="material-icons prefix fa fa-search" aria-hidden="true"></i>
-			<input id="icon_prefix" type="text" ng-change="resetItems()" ng-model="search" class="validate"></input>
+			<input id="icon_prefix" type="text" ng-change="searchItems()" ng-model="search" class="validate"></input>
 			<label for="icon_prefix">Rechercher votre bonheur ici</label>
 		</div>
 	</div>
+</div>
+<div class="filter-wrapper back_purple">
+	<ul class="collapsible" data-collapsible="accordion">
+		<li>
+			<div ng-click="initFilter()" class="collapsible-header"><i class="fa fa-filter" aria-hidden="true"></i>Filtrer votre recherche</div>
+			<div class="collapsible-body row">
+				<div class="col m6 s12 color-choice">
+					<h5>Couleur</h5>
+					<p ng-repeat="color in itemsColor track by $index">
+						<input type="checkbox" id="$index" />
+						<label for="$index">{{color}}</label>
+					</p>
+				</div>
+				<div class="col m6 s12 type-choice">
+					<h5>Types</h5>
+					<p ng-repeat="type in itemsType track by $index">
+						<input type="checkbox" id="$index" />
+						<label for="$index">{{type}}</label>
+					</p>
+				</div>
+			</div>
+		</li>
+	</ul>
 </div>
