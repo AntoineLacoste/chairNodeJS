@@ -3,7 +3,7 @@
 angular.module('chairApp')
 .controller('HomeController', ['$scope', 'routing', 'localStorage', '$http', '$rootScope', function ($scope, routing, localStorage, $http, $rootScope) {
 	
-	// Initialisation de l'application
+	// Application initializing
 	localStorage.init();
 	var cart = 'cart';
 	
@@ -15,6 +15,7 @@ angular.module('chairApp')
 		console.log(error);
 	});
 
+	//go to a single article page
 	$scope.goTo = function(reference){
 		routing.changeURL(reference);
 	}

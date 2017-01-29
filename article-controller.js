@@ -1,5 +1,6 @@
 'use strict';
 
+//Controller which handle the article page
 angular.module('chairApp')
     .controller('ArticleController', ['$scope', '$http', '$routeParams', 'localStorage', '$rootScope', function ($scope, $http, $routeParams, localStorage, $rootScope) {
         
@@ -13,6 +14,7 @@ angular.module('chairApp')
             }
         );
 
+        //add the article to the cart
         $scope.addToCart = function () {
             localStorage.set($scope.article);
             $scope.numberOfItems = localStorage.getNumberOfItems();

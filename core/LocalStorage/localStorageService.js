@@ -1,5 +1,6 @@
 'use strict';
 
+//service to store the cart in the local storage of the  browser
 angular.module('chairApp')
 .service('localStorage', ['$q', function($q) {
 

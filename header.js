@@ -1,5 +1,6 @@
 'use strict';
 
+//directive for the header on the top of the page
 angular.module('chairApp')
 .directive('headerTop', [ function () {
 	return {
