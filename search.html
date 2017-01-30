@@ -14,18 +14,24 @@
 			<div class="collapsible-body row">
 				<div class="col m6 s12 color-choice">
 					<h5>Couleur</h5>
-					<p ng-repeat="color in itemsColor track by $index">
-						<input type="checkbox" id="$index" />
-						<label for="$index">{{color}}</label>
+					<p ng-repeat="color in filters['color'] track by $index">
+						<input 
+						ng-change="filterItems($index, 'color')" 
+						ng-model="selection" 
+						name="group" 
+						value="{{color}}" 
+						type="checkbox" 
+						id="{{$index}}" />
+						<label for="{{$index}}">{{color}}</label>
 					</p>
 				</div>
-				<div class="col m6 s12 type-choice">
-					<h5>Types</h5>
-					<p ng-repeat="type in itemsType track by $index">
-						<input type="checkbox" id="$index" />
-						<label for="$index">{{type}}</label>
+			<!-- 	<div class="col m6 s12 type-choice">
+					<h5>Type</h5>
+					<p ng-repeat="type in filters['types'] track by $index">
+						<input type="checkbox" id="{{$index}}" />
+						<label for="{{$index}}">{{type}}</label>
 					</p>
-				</div>
+				</div> -->
 			</div>
 		</li>
 	</ul>
