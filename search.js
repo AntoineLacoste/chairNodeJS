@@ -11,9 +11,10 @@ angular.module('chairApp')
 			$scope.filters['type'] = [];
 			$scope.filters['color'] = [];
 
-			var filtersSelected = [];
-			filtersSelected['type'] = [];
-			filtersSelected['color'] = [];
+			$scope.selection = {
+				color: '',
+				type: ''
+			}
 
 
 			// Initialisation de l'accordéon du filtre de recherche
@@ -50,31 +51,14 @@ angular.module('chairApp')
 			}
 
 			// Mise à jour des résultats lors du filtre
-			$scope.filterItems = function(index, searchFilter){
-
-				// Mise à jour des filtres sélectionés
-				if( filtersSelected[searchFilter].indexOf($scope.filters[searchFilter][index]) >= 0){
-					filtersSelected[searchFilter].splice(index, 1);
-				}
-				else{
-					filtersSelected[searchFilter].push($scope.filters[searchFilter][index]);
-				}
-				// Recherche dans tous le items les articles correspondant aux filtres sélectionés
-				newItems = [];
-				angular.forEach($rootScope.items, function(item){
-					var key = '';
-					// On boucle sur les différents filtres 
-					for( key in filtersSelected ){
-						if(filtersSelected[key].length > 0){
-							// On vérifie que l'item courant contient une des occurences cochées du filtre courant
-							if( filtersSelected[key].indexOf( item[searchFilter].toLowerCase() ) >=0 ){
-								newItems.push(item);
-							}
-						}
-					}
-				});
-				$scope.itemsToDisplay = newItems;
+			$scope.toto = function(){
+				console.log('toto');
+				console.log('erreur ', $scope.test);
 			}
+
+			$scope.$watch('test', function(test) {
+				console.log(test);
+			});
 		}]
 	};
 }]);

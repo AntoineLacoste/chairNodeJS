@@ -14,16 +14,16 @@
 			<div class="collapsible-body row">
 				<div class="col m6 s12 color-choice">
 					<h5>Couleur</h5>
-					<p ng-repeat="color in filters['color'] track by $index">
+					<div ng-repeat="color in filters['color'] track by $index">
 						<input 
-						ng-change="filterItems($index, 'color')" 
-						ng-model="selection" 
-						name="group" 
-						value="{{color}}" 
-						type="checkbox" 
-						id="{{$index}}" />
-						<label for="{{$index}}">{{color}}</label>
-					</p>
+						ng-change="toto()" 
+						ng-model="test" 
+						ng-value="{{color}}" 
+						name="group"
+						type="radio" 
+						id="{{$index +1}}" />
+						<label for="{{$index +1}}">{{color}}</label>
+					</div>
 				</div>
 			<!-- 	<div class="col m6 s12 type-choice">
 					<h5>Type</h5>
