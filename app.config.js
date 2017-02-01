@@ -6,17 +6,17 @@ angular.module('chairApp')
 	//homepage route
 	.when('/', {
 		controller: 'HomeController',
-		templateUrl:  'home.html'
+		templateUrl:  'home-page/home.html'
 	})
 	//signle article route
 	.when('/article/:reference', {
 		controller: 'ArticleController',
-		templateUrl:  'article.html'
+		templateUrl:  'article-page/article.html'
 	})
 	//access to the user cart
 	.when('/cart', {
 		controller: 'CartController',
-		templateUrl:  'cart.html'
+		templateUrl:  'cart-page/cart.html'
 	})
 	.otherwise({
 		redirectTo: '/'

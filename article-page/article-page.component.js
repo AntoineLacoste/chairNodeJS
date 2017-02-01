@@ -1,9 +1,14 @@
 'use strict';
 
-//Controller which handle the article page
-angular.module('chairApp')
+angular.module('articlePageModule', ['ngRoute'])
+    .component('articlePage', {
+        templateUrl: 'article-page/article.html',
+        controller: 'ArticleController',
+    });
+
+angular.module('articlePageModule')
     .controller('ArticleController', ['$scope', '$http', '$routeParams', 'localStorage', '$rootScope', function ($scope, $http, $routeParams, localStorage, $rootScope) {
-        
+
         $http.get( $rootScope.apiURL + '/chairs/' + $routeParams.reference).then(
             function (response) {
                 $scope.article = response.data.data[0];
