@@ -3,7 +3,7 @@
 angular.module('articlePageModule', ['ngRoute'])
     .component('articlePage', {
         templateUrl: 'article-page/article.html',
-        controller: 'ArticleController',
+        controller: 'ArticleController'
     });
 
 angular.module('articlePageModule')

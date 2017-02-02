@@ -3,7 +3,7 @@
 angular.module('homePageModule', ['ngRoute'])
     .component('homePage', {
         templateUrl: 'home-page/home.html',
-        controller: 'HomeController',
+        controller: 'HomeController'
     });
 
 angular.module('homePageModule')

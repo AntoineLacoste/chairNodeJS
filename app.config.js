@@ -5,18 +5,15 @@ angular.module('chairApp')
 	$routeProvider
 	//homepage route
 	.when('/', {
-		controller: 'HomeController',
-		templateUrl:  'home-page/home.html'
+        template:  '<home-page></home-page>'
 	})
 	//signle article route
 	.when('/article/:reference', {
-		controller: 'ArticleController',
-		templateUrl:  'article-page/article.html'
+        template:  '<article-page></article-page>'
 	})
 	//access to the user cart
 	.when('/cart', {
-		controller: 'CartController',
-		templateUrl:  'cart-page/cart.html'
+        template:  '<cart-page></cart-page>'
 	})
 	.otherwise({
 		redirectTo: '/'
