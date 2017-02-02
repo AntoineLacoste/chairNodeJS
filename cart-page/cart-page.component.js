@@ -14,7 +14,6 @@ angular.module('cartPageModule')
         $scope.form.titulary = "JOJO";
         $scope.form.number = 2343435151311254;
         $scope.form.expiration = "16/05/2017";
-
         $scope.form.cryptogram = '456';
 
         // Création de la modal

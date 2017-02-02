@@ -51,7 +51,8 @@
 			</div>
 		</div>
 		<div class="modal-footer back_grey">
-			<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Retour accueil</a>
+			<a ng-if="validOrder" href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Retour accueil</a>
+			<a ng-if="!validOrder" href="#/cart" class=" modal-action modal-close waves-effect waves-green btn-flat">Page panier</a>
 		</div>
 	</div>	
 </div>
