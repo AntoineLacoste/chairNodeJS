@@ -100,10 +100,48 @@ p{
 	position: relative;
 }
 
+/* SEARCH AND FILTER DIRECTIVE */
 
+.search-wrapper, .filter-wrapper{
+	padding: 0 10px;
+}
+
+.search-wrapper .row{
+	margin-bottom: 0;
+}
+
+.input-field .prefix.active, label.active{
+	color: #373037;
+}
+
+.input-field.col label{
+	left: 0;
+}
+
+input#icon_prefix{
+	margin-bottom: 5px;
+}
+
+.filter-wrapper .collapsible{
+	margin: 0;
+	border : none;
+}
+
+.filter-wrapper .collapsible .collapsible-header, .filter-wrapper .collapsible .collapsible-body{
+	background-color: #373037;
+	border: none;
+	padding: 0;
+}
+
+.color-choice, .type-choice{
+	padding-bottom: 20px !important;
+}
+
+.color-choice p, .type-choice p{
+	padding: 0px;
+}
 
 /* PAGE CATEGORIE */
-
 
 .wrapper_item{
 	text-align: center;
