@@ -7,32 +7,3 @@
 		</div>
 	</div>
 </div>
-<div class="filter-wrapper back_purple">
-	<ul class="collapsible" data-collapsible="accordion">
-		<li>
-			<div ng-click="initFilter()" class="collapsible-header"><i class="fa fa-filter" aria-hidden="true"></i>Filtrer votre recherche</div>
-			<div class="collapsible-body row">
-				<div class="col m6 s12 color-choice">
-					<h5>Couleur</h5>
-					<div ng-repeat="color in filters['color'] track by $index">
-						<input 
-						ng-change="toto()" 
-						ng-model="test" 
-						ng-value="{{color}}" 
-						name="group"
-						type="radio" 
-						id="{{$index +1}}" />
-						<label for="{{$index +1}}">{{color}}</label>
-					</div>
-				</div>
-			<!-- 	<div class="col m6 s12 type-choice">
-					<h5>Type</h5>
-					<p ng-repeat="type in filters['types'] track by $index">
-						<input type="checkbox" id="{{$index}}" />
-						<label for="{{$index}}">{{type}}</label>
-					</p>
-				</div> -->
-			</div>
-		</li>
-	</ul>
-</div>
