@@ -43,7 +43,11 @@ angular.module('cartPageModule')
         };
 
         $scope.pay = function(){
-            $http.post($rootScope.apiURL + '/paiment',$scope.form).then(function(res){
+            var info = {
+                paiment: $scope.form,
+                cart: $scope.cart
+            };
+            $http.post($rootScope.apiURL + '/paiment', info).then(function(res){
                 $scope.validOrder = res.data.valid;
                 if( res.data.valid ){
                     $('#modal1').modal('open');
