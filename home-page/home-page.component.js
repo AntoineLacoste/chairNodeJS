@@ -25,10 +25,10 @@ angular.module('homePageModule')
 
         $scope.goTo = function(reference){
             routing.changeURL(reference);
-        };
+        }
 
         $scope.get = function(){
             console.log(localStorage.get(cart));
-        };
+        }
 
     }]);
