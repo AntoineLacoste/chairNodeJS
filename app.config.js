@@ -7,7 +7,7 @@ angular.module('chairApp')
 	.when('/', {
         template:  '<home-page></home-page>'
 	})
-	//signle article route
+	//single article route
 	.when('/article/:reference', {
         template:  '<article-page></article-page>'
 	})

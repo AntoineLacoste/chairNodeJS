@@ -9,12 +9,12 @@ angular.module('chairApp')
 			var newItems = [];
 
 
-			// Initialisation de l'accordéon du filtre de recherche
+			// Initialization of the filter
 			$(document).ready(function(){
 				$('.collapsible').collapsible();
 			});
 
-			// Mise à jour des résultats lors d'une recherche 
+			// Refresh of the items displayed
 			$scope.searchItems = function(){
 				if($scope.search != ''){
 					newItems = [];
